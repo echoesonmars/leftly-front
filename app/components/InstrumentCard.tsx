@@ -1,7 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function InstrumentCard({ name, description, imagePath, href }) {
+interface InstrumentCardProps {
+  name: string;
+  description: string;
+  imagePath: string;
+  href: string;
+}
+
+export default function InstrumentCard({ name, description, imagePath, href }: InstrumentCardProps) {
   return (
     <Link href={href}>
       <div className="group relative w-80 h-80 bg-gradient-to-br from-white to-neutral-50 dark:from-neutral-900 dark:to-neutral-950 rounded-3xl border-2 border-neutral-200 dark:border-neutral-800 overflow-hidden transition-all duration-500 hover:border-[#FF4400] hover:shadow-[0_0_50px_rgba(255,68,0,0.4)] hover:-translate-y-2 cursor-pointer">
