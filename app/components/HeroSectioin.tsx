@@ -43,7 +43,7 @@ export default function Hero() {
 
 <BlurFade delay={2}>
 
-<section className="w-screen mx-auto mt-12 sm:mt-8 md:mt-10 tracking-[-0.045em] -mx-[50vw] left-[50%] relative">
+<section className="w-screen mt-12 sm:mt-8 md:mt-10 tracking-[-0.045em] -mx-[50vw] left-[50%] relative">
   <div className="relative rounded-none p-3 sm:p-4 md:p-5 shadow-lg border-y transition-transform duration-300 hover:scale-[1.01] hover:drop-shadow-[0_8px_20px_rgba(255,68,0,0.12)] overflow-hidden group">
     <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-orange-400/6 via-transparent to-red-500/6 blur-sm transform-gpu group-hover:scale-105 transition-transform duration-500" />
     <div className="relative text-center max-w-7xl mx-auto px-4">
