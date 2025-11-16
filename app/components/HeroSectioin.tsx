@@ -42,12 +42,11 @@ export default function Hero() {
       </div>
 
 <BlurFade delay={2}>
-<section className="max-w-full mx-auto mt-12 sm:mt-8 md:mt-10 px-2 tracking-[-0.045em]">
 
-  <div className="relative rounded-xl p-3 sm:p-4 md:p-5 shadow-lg border transition-transform duration-300 hover:scale-[1.02] hover:drop-shadow-[0_8px_20px_rgba(255,68,0,0.12)] overflow-hidden group">
-    <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-orange-400/6 via-transparent to-red-500/6 blur-sm transform-gpu group-hover:scale-105 transition-transform duration-500 rounded-xl" />
-
-    <div className="relative text-center">
+<section className="w-screen mx-auto mt-12 sm:mt-8 md:mt-10 tracking-[-0.045em] -mx-[50vw] left-[50%] relative">
+  <div className="relative rounded-none p-3 sm:p-4 md:p-5 shadow-lg border-y transition-transform duration-300 hover:scale-[1.01] hover:drop-shadow-[0_8px_20px_rgba(255,68,0,0.12)] overflow-hidden group">
+    <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-orange-400/6 via-transparent to-red-500/6 blur-sm transform-gpu group-hover:scale-105 transition-transform duration-500" />
+    <div className="relative text-center max-w-7xl mx-auto px-4">
       <div className="text-xs sm:text-sm md:text-base lg:text-lg text-neutral-600 dark:text-neutral-400 flex items-baseline justify-center gap-1 whitespace-nowrap">
         <TextAnimate animation="slideUp" by="word" className="inline" delay={3.2}>
           There are currently
@@ -67,7 +66,6 @@ export default function Hero() {
       </div>
     </div>
   </div>
-
 </section>
 
   </BlurFade>

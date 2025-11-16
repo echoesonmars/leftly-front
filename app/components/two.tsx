@@ -1,94 +1,84 @@
 import { BlurFade } from "@/components/ui/blur-fade";
 import { TextAnimate } from "@/components/ui/text-animate";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 import React from "react";
-import {
-  DraggableCardBody,
-  DraggableCardContainer,
-} from "@/components/ui/draggable-card";
+
 
 export default function Two() {
-const items = [
+  const testimonials = [
   {
-    title: "Little Jimmy King",
-    image:
-      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7kraeIObwTx6ENJABJ56GMfy86d8Lhzj74TpaqvD6ZfLF-cnxuOxG4q4Eg60md3qspboNrDnqFpNR9A7K0PWt0JdDmOEXLKHrzn8V4w_lCiH-jjFsqBtyPewTDWT1X9HLXCUC3cS3pmynISIQk8eNx3iSBfe2IVScKHSOI0gD-K7Ig3prNy2WWc73zXsq/s320/402058191_905129194950841_4051493503323805226_n.jpg",
-    className: "absolute top-16 left-[50%] sm:top-24 sm:left-[55%] md:top-32 rotate-[10deg] z-10",
+    quote:
+      "Little Jimmy King carried Memphis blues forward with gritty, vocal-driven guitar work and fiery phrasing that bridged traditional blues and modern electric styles.",
+    name: "Little Jimmy King",
+    designation: "Memphis Blues Guitarist",
+    src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7kraeIObwTx6ENJABJ56GMfy86d8Lhzj74TpaqvD6ZfLF-cnxuOxG4q4Eg60md3qspboNrDnqFpNR9A7K0PWt0JdDmOEXLKHrzn8V4w_lCiH-jjFsqBtyPewTDWT1X9HLXCUC3cS3pmynISIQk8eNx3iSBfe2IVScKHSOI0gD-K7Ig3prNy2WWc73zXsq/s320/402058191_905129194950841_4051493503323805226_n.jpg",
   },
   {
-    title: "Elizabeth \"Libba\" Cotten",
-    image:
-      "https://www.syracuse.com/resizer/v2/BXBP7LSGONFQHAXJX2OJODWUA4.jpg?auth=092a7c0d55a04202bafd70d7b9548ca1f4b13229fce568cafe69abf96eadfea5&width=1280&smart=true&quality=90",
-    className: "absolute top-12 left-[40%] sm:top-20 sm:left-[45%] md:top-24 rotate-[-7deg] z-10",
+    quote:
+      "Elizabeth \"Libba\ Cotten invented a distinctive alternating-thumb fingerpicking style and wrote enduring folk standards like Freight Train, playing upside-down without restringing.",
+    name: "Elizabeth \"Libba\" Cotten",
+    designation: "Folk Guitarist & Composer",
+    src: "https://www.syracuse.com/resizer/v2/BXBP7LSGONFQHAXJX2OJODWUA4.jpg?auth=092a7c0d55a04202bafd70d7b9548ca1f4b13229fce568cafe69abf96eadfea5&width=1280&smart=true&quality=90",
   },
   {
-    title: "Otis Rush",
-    image:
-      "https://s3.us-east-2.amazonaws.com/alligator.prod.public/images/artists/rush_otis.jpg",
-    className: "absolute top-4 left-[25%] sm:top-6 sm:left-[30%] md:top-8 rotate-[4deg] z-10",
+    quote:
+      "Otis Rush helped define Chicago's West Side sound — his minor-key phrasing, searing string bends and emotional delivery shaped modern electric blues.",
+    name: "Otis Rush",
+    designation: "West Side Blues Legend",
+    src: "https://s3.us-east-2.amazonaws.com/alligator.prod.public/images/artists/rush_otis.jpg",
   },
   {
-    title: "Eric Gales",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Eric_Gales_in_2011.jpg/500px-Eric_Gales_in_2011.jpg",
-    className: "absolute top-2 left-[35%] sm:top-4 sm:left-[40%] md:top-5 rotate-[8deg] z-10",
+    quote:
+      "Eric Gales is a modern blues-rock virtuoso known for blistering runs, expressive bends and a raw, vocal-like tone that pushed contemporary electric guitar technique.",
+    name: "Eric Gales",
+    designation: "Modern Blues-Rock Guitarist",
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Eric_Gales_in_2011.jpg/500px-Eric_Gales_in_2011.jpg",
   },
   {
-    title: "Dick Dale",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dick_Dale.jpg/500px-Dick_Dale.jpg",
-    className: "absolute top-20 left-[20%] sm:top-32 sm:left-[25%] md:top-40 rotate-[-7deg] z-10",
+    quote:
+      "Dick Dale invented the surf-guitar voice — rapid alternate picking, heavy reverb and aggressive tremolo picking created the signature surf sound heard worldwide.",
+    name: "Dick Dale",
+    designation: "King of Surf Guitar",
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dick_Dale.jpg/500px-Dick_Dale.jpg",
   },
   {
-    title: "Albert King",
-    image:
-      "https://cdn1.tenchat.ru/static/vbc-gostinder/2023-09-04/d6da7e8a-c90f-44c6-9636-d9501d46a8b8.jpg?width=1396&height=838&fmt=webp",
-    className: "absolute top-5 left-[15%] sm:top-8 sm:left-[20%] md:top-10 rotate-[-5deg] z-10",
+    quote:
+      "Albert King's upside-down left-hand technique and monumental string bends set a new blues vocabulary — his phrasing directly influenced generations of players.",
+    name: "Albert King",
+    designation: "Blues Icon",
+    src: "https://cdn1.tenchat.ru/static/vbc-gostinder/2023-09-04/d6da7e8a-c90f-44c6-9636-d9501d46a8b8.jpg?width=1396&height=838&fmt=webp",
   },
   {
-    title: "Jimi Hendrix",
-    image:
-      "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/MSNBC/Components/Photo/_new/100228-hendrix2-vlg-3p.jpg",
-    className: "absolute top-10 right-[30%] sm:top-16 sm:right-[35%] md:top-20 rotate-[2deg] z-10",
+    quote:
+      "Jimi Hendrix expanded the electric guitar language — feedback, wah, studio experimentation and virtuosic touch — redefining what the instrument could do in rock music.",
+    name: "Jimi Hendrix",
+    designation: "Guitar Innovator",
+    src: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/MSNBC/Components/Photo/_new/100228-hendrix2-vlg-3p.jpg",
   },
 ];
 
 
+
   return (
     <>
-        <section className='mt-20 sm:mt-16 md:mt-20 mx-auto relative z-50 shadow-[0px_20px_56px_50px_#ffffff] bg-white dark:bg-black'>
-          <div className='max-w-2xl mt-10 sm:mt-16 md:mt-20 mx-auto relative pb-6 sm:pb-8 md:pb-10 px-4 sm:px-6'>
-          <h1 className="text-xl sm:text-2xl md:text-3xl mt-6 sm:mt-8 md:mt-10 tracking-[-0.07em]">
+        <section className='mt-5 sm:mt-10 md:mt-12 mx-auto relative shadow-[0px_10px_36px_20px_#ffffff] bg-white dark:bg-black'>
+          <div className='max-w-4xl sm:mt-8 md:mt-10 mx-auto relative pb-4 sm:pb-6 md:pb-8 px-4 sm:px-6'>
+          <h1 className="text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-6 md:mt-8 tracking-[-0.07em]">
             <TextAnimate animation="slideUp" by="word" className="inline" delay={1}>
               Leftly is a community of left-handed musicians and creators exploring alternative ways to play, learn, and express music.
             </TextAnimate>
           </h1>
-          <h1 className="text-[#575757] text-xl sm:text-2xl md:text-3xl tracking-[-0.07em] mt-4 sm:mt-6">
+          <h1 className="text-[#575757] text-xl sm:text-2xl md:text-3xl tracking-[-0.07em] mt-2 sm:mt-3 md:mt-4">
             <TextAnimate animation="slideUp" by="word" className="inline" delay={2}>
               It&apos;s not about rules
             </TextAnimate>
           </h1>
           </div>
         </section>
-      <div>
+      <div className="-mt-12 sm:-mt-12 md:-mt-16">
         <BlurFade delay={2} inView>  
-        <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip px-2 sm:px-4">
-          <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-lg sm:text-2xl md:text-4xl font-bold text-neutral-400 dark:text-neutral-800">
-            Flip your world.
-          </p>
-          {items.map((item, index) => (
-            <DraggableCardBody key={index} className={item.className}>
-              <img
-                src={item.image}
-                alt={item.title}
-                className="pointer-events-none relative z-10 h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 object-cover rounded-lg"
-              />
-              <h3 className="mt-2 sm:mt-3 md:mt-4 text-center text-lg sm:text-xl md:text-2xl font-bold text-neutral-700 dark:text-neutral-300">
-                {item.title}
-              </h3>
-            </DraggableCardBody>
-          ))}
-        </DraggableCardContainer>
+          <AnimatedTestimonials testimonials={testimonials} />
         </BlurFade>
       </div>
       </>
